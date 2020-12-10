@@ -1,0 +1,1 @@
+export const SIGNUP_DEFAULT = 'SIGNUP_DEFAULT';

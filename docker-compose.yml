@@ -1,0 +1,43 @@
+version: '3'
+services:
+  api:
+    # depends_on:
+    #   - postgres
+    build:
+      dockerfile: Dockerfile.dev
+      context: ./server
+    volumes:
+      - /app/node_modules
+      - ./server:/app
+    environment:
+      - WEB_URL=${WEB_URL}
+      - MONGO_URI=${MONGO_URI}
+      - DB_NAME=${DB_NAME}
+      - EMAIL=${EMAIL}
+      - SEND_GRID_API_KEY=${SEND_GRID_API_KEY}
+      - JWT_SECRET=${JWT_SECRET}
+      - COMPANY_NAME=${COMPANY_NAME}
+      - FACEBOOK_URL=${FACEBOOK_URL}
+      - CENTRAL_AJUDA_URL=${CENTRAL_AJUDA_URL}
+
+  web:
+    stdin_open: true
+    restart: always
+    build:
+      dockerfile: Dockerfile.dev
+      context: ./web
+    volumes:
+      - /app/node_modules
+      - ./web:/app
+    environment:
+      - REACT_APP_WEB_URL=${WEB_URL}
+  nginx-proxy:
+    depends_on:
+      - api
+      - web
+    restart: always
+    build:
+      dockerfile: Dockerfile.dev
+      context: ./nginx
+    ports:
+      - '3000:80'

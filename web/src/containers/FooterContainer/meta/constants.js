@@ -1,0 +1,1 @@
+export const FOOTER_DEFAULT = 'FOOTER_DEFAULT';

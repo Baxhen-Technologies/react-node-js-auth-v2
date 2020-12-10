@@ -1,0 +1,13 @@
+{
+  "plugins": ["import"],
+  "extends": ["react-app"],
+  "parserOptions": {
+    "ecmaVersion": 2018,
+    "sourceType": "module"
+  },
+  "rules": {
+    "import/no-anonymous-default-export": [0],
+    "no-console": "warn",
+    "import/first": "error"
+  }
+}

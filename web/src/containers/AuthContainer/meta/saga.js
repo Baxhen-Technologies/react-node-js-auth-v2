@@ -25,7 +25,9 @@ function* handleSignIn() {
   } catch (error) {
     error.response.data.message
       ? yield put(actions.getLoginError(error.response.data.message))
-      : yield put(actions.getLoginError('Credenciais Inválidas'));
+      : yield put(
+          actions.getLoginError('components.loginPage.credentialsError')
+        );
   }
 }
 function* handleSignUp() {

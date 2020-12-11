@@ -21,7 +21,7 @@ exports.signIn = (req, res) => {
   }
   return res
     .status(401)
-    .send({ message: 'Conta desativada, verifique seu email para ativar' })
+    .send({ message: 'components.loginPage.accountActivationError' })
 }
 exports.forgotPassword = async (req, res) => {
   const { email } = req.body
@@ -92,7 +92,9 @@ exports.signup = (req, res, next) => {
     }
 
     if (existingUser) {
-      return res.status(422).send({ message: 'Email já cadastrado' })
+      return res
+        .status(422)
+        .send({ message: 'components.signUpPage.emailInUseError' })
     }
     // if a user does not exists create and save user record
     const user = new User({ email, password, username })
@@ -144,8 +146,7 @@ exports.signup = (req, res, next) => {
       }
 
       return res.send({
-        message:
-          'Verifique a sua caixa de entrada. Enviamos um link para validar o seu email.',
+        message: 'components.signUpPage.successMessage',
       })
     })
   })

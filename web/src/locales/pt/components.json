@@ -1,0 +1,42 @@
+{
+  "components": {
+    "navbar": {
+      "home": "Home",
+      "login": "Login",
+      "feature": "Funcionalidade",
+      "signUp": "Cadastrar",
+      "signOut": "Sair"
+    },
+    "homePage": {
+      "main": "Tire O Seu Projeto Do Papel",
+      "button": "Login"
+    },
+    "loginPage": {
+      "main": "Login",
+      "formEmail": "Email",
+      "formEmailError": "Digite seu email para fazer login",
+      "formPassword": "Senha",
+      "formPasswordError": "Digite sua senha para fazer login",
+      "forgotPassword": "Esqueceu a senha?",
+      "button": "Login",
+      "credentialsError": "Credencias Inválidas",
+      "accountActivationError": "Conta desativada, verifique seu email para ativar"
+    },
+    "signUpPage": {
+      "main": "Cadastro",
+      "formEmail": "Email",
+      "formEmailError": "Digite seu email",
+      "formName": "Nome",
+      "formNameError": "Digite seu nome",
+      "formPassword": "Senha",
+      "formPasswordError": "Digite sua senha",
+      "formConfirmPassword": "Confirme a senha",
+      "formConfirmPasswordError": "Digite a confirmação de senha",
+      "formPasswordUnMatchError": "As senhas não conferem",
+      "button": "Criar Conta",
+      "successMessage": "Verifique a sua caixa de entrada. Enviamos um link para validar o seu email.",
+      "emailInUseError": "Email já cadastrado",
+      "dialogTitle": "Email Enviado"
+    }
+  }
+}

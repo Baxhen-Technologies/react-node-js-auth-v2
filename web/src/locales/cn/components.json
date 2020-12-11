@@ -1,0 +1,42 @@
+{
+  "components": {
+    "navbar": {
+      "home": "主页",
+      "login": "登入",
+      "feature": "特征",
+      "signUp": "注册",
+      "signOut": "登出"
+    },
+    "homePage": {
+      "main": "使您的项目成为现实",
+      "button": "登入"
+    },
+    "loginPage": {
+      "main": "登入",
+      "formEmail": "电子邮件",
+      "formEmailError": "输入您的电子邮件登录",
+      "formPassword": "密码",
+      "formPasswordError": "输入密码登录",
+      "forgotPassword": "忘记密码？",
+      "button": "登入",
+      "credentialsError": "无效证件",
+      "accountActivationError": "帐户已禁用，请检查您的电子邮件以将其激活"
+    },
+    "signUpPage": {
+      "main": "注册",
+      "formEmail": "电子邮件",
+      "formEmailError": "输入您的电子邮件登录",
+      "formName": "名字",
+      "formNameError": "输入你的名字",
+      "formPassword": "密码",
+      "formPasswordError": "输入密码登录",
+      "formConfirmPassword": "确认密码",
+      "formConfirmPasswordError": "输入密码确认",
+      "formPasswordUnMatchError": "密码不匹配",
+      "button": "创建帐户",
+      "successMessage": "检查你的收件箱。 我们发送了一个链接来验证您的电子邮件。",
+      "emailInUseError": "电子邮件已经注册",
+      "dialogTitle": "邮件已发送"
+    }
+  }
+}

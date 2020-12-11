@@ -1,6 +1,7 @@
 import React, { memo } from 'react';
 import { Grid, Typography, Button } from '@material-ui/core';
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 
 import { styles } from './styles';
 
@@ -8,6 +9,7 @@ const useStyles = styles;
 
 function Home(props) {
   const classes = useStyles();
+  const { t } = useTranslation();
   return (
     <Grid
       container
@@ -18,7 +20,7 @@ function Home(props) {
     >
       <Grid item>
         <Typography variant="h2" color="primary" className={classes.mainText}>
-          Tire O Seu Projeto Do Papel
+          {t('components.homePage.main')}
         </Typography>
       </Grid>
       <Grid item>
@@ -29,7 +31,7 @@ function Home(props) {
           color="primary"
           className={classes.mainButton}
         >
-          Login
+          {t('components.homePage.button')}
         </Button>
       </Grid>
     </Grid>

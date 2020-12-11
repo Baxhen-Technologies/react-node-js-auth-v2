@@ -3,15 +3,15 @@ import { InputTextField } from 'components/ReduxForm/TextInput/InputTextField';
 
 export const formFields = [
   {
-    label: 'Nome',
+    label: 'components.signUpPage.formName',
     name: 'username',
     type: 'text',
     className: 'input',
-    noValueError: 'Digite seu nome',
+    noValueError: 'components.signUpPage.formNameError',
     inputType: InputTextField,
   },
   {
-    label: 'Email',
+    label: 'components.signUpPage.formEmail',
     name: 'email',
     type: 'email',
     className: 'input',
@@ -19,7 +19,7 @@ export const formFields = [
     inputType: InputTextField,
   },
   {
-    label: 'Senha',
+    label: 'components.signUpPage.formPassword',
     name: 'password',
     type: 'password',
     className: 'input',
@@ -27,7 +27,7 @@ export const formFields = [
     inputType: InputPasswordField,
   },
   {
-    label: 'Confirme a Senha',
+    label: 'components.signUpPage.formConfirmPassword',
     name: 'confirmPassword',
     type: 'password',
     className: 'input',

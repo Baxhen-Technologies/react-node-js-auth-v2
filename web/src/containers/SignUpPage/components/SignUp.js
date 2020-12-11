@@ -38,6 +38,7 @@ class SignUp extends Component {
       pristine,
       submitting,
       formFields,
+      t,
     } = this.props;
     const onDialogClose = () => {
       this.setState({ open: !this.state.open });
@@ -76,7 +77,7 @@ class SignUp extends Component {
                 <Grid item key={name} style={{ marginBottom: '0.5em' }}>
                   <Field
                     component={inputType}
-                    label={label}
+                    label={t(label)}
                     name={name}
                     type={type}
                     className={classes[className]}
@@ -90,7 +91,7 @@ class SignUp extends Component {
                   disabled={pristine || submitting}
                   type="submit"
                 >
-                  Criar Conta
+                  {t('components.signUpPage.button')}
                 </Button>
               </Grid>
             </Grid>
@@ -101,7 +102,7 @@ class SignUp extends Component {
                 marginTop: '9.5px',
               }}
             >
-              {signUpErrorMessage}
+              {t(signUpErrorMessage)}
             </FormHelperText>
           </FormControl>
         </Grid>
@@ -121,12 +122,12 @@ class SignUp extends Component {
                 <Grid container direction="column">
                   <Grid item>
                     <Typography variant="h4" color="primary" gutterBottom>
-                      Email Enviado
+                      {t('components.signUpPage.dialogTitle')}
                     </Typography>
                   </Grid>
                   <Grid item>
                     <Typography color="primary" variant="body1">
-                      {signUpSuccessMessage}
+                      {t(signUpSuccessMessage)}
                     </Typography>
                   </Grid>
                   <DialogActions>

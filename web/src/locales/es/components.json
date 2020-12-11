@@ -1,0 +1,42 @@
+{
+  "components": {
+    "navbar": {
+      "home": "Home",
+      "login": "Login",
+      "feature": "Funcionalidad",
+      "signUp": "Regístrate",
+      "signOut": "Desconectar"
+    },
+    "homePage": {
+      "main": "Saque su proyecto del papel",
+      "button": "Login"
+    },
+    "loginPage": {
+      "main": "Login",
+      "formEmail": "Email",
+      "formEmailError": "Ingrese su email para iniciar sesión",
+      "formPassword": "Contraseña",
+      "formPasswordError": "Ingrese su contraseña para iniciar sesión",
+      "forgotPassword": "Olvido la contraseña?",
+      "button": "Login",
+      "credentialsError": "Credenciales no válidas",
+      "accountActivationError": "Cuenta deshabilitada, revisa tu correo electrónico para activar"
+    },
+    "signUpPage": {
+      "main": "Registrarse",
+      "formEmail": "Email",
+      "formEmailError": "Ingrese su email para iniciar sesión",
+      "formName": "Nombre",
+      "formNameError": "Escriba su nombre",
+      "formPassword": "Contraseña",
+      "formPasswordError": "Ingrese su contraseña para iniciar sesión",
+      "formConfirmPassword": "Confirme la contraseña",
+      "formConfirmPasswordError": "Ingrese la confirmación de la contraseña",
+      "formPasswordUnMatchError": "Las contraseñas no coinciden",
+      "button": "Crea una cuenta",
+      "successMessage": "Revisa tu correo. Enviamos un enlace para validar su correo electrónico.",
+      "emailInUseError": "Email ya registrado",
+      "dialogTitle": "Email Enviado"
+    }
+  }
+}

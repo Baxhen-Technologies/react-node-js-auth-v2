@@ -6,9 +6,14 @@ export const headerConfig = [
     // condition: { first: props.authenticated, second: true },
     logoTab: { logo, to: '/feature' },
     tabs: [
-      { label: 'Feature', to: '/feature', className: 'tab', valueActive: 0 },
       {
-        label: 'Sign Out',
+        label: 'components.navbar.feature',
+        to: '/feature',
+        className: 'tab',
+        valueActive: 0,
+      },
+      {
+        label: 'components.navbar.signOut',
         to: '/signout',
         className: 'lastTab',
         valueActive: 2,
@@ -20,10 +25,20 @@ export const headerConfig = [
     // condition: { first: props.authenticated, second: false },
     logoTab: { label: 'Logo Aqui', to: '/' },
     tabs: [
-      { label: 'Home', to: '/', className: 'tab', valueActive: 0 },
-      { label: 'Login', to: '/login', className: 'tab', valueActive: 1 },
       {
-        label: 'Cadastro',
+        label: 'components.navbar.home',
+        to: '/',
+        className: 'tab',
+        valueActive: 0,
+      },
+      {
+        label: 'components.navbar.login',
+        to: '/login',
+        className: 'tab',
+        valueActive: 1,
+      },
+      {
+        label: 'components.navbar.signUp',
         to: '/signup',
         className: 'lastTab',
         valueActive: 2,

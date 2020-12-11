@@ -14,6 +14,7 @@ import Grid from '@material-ui/core/Grid';
 import Drawer from '@material-ui/core/Drawer';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
 import Hidden from '@material-ui/core/Hidden';
+import { useTranslation } from 'react-i18next';
 
 import { styles } from './styles';
 import { Link } from 'react-router-dom';
@@ -46,6 +47,7 @@ function Navigation({
   const classes = useStyles();
   const theme = useTheme();
   const matches = useMediaQuery(theme.breakpoints.down('xs'));
+  const { t } = useTranslation();
 
   const [mobileOpen, setMobileOpen] = useState(false);
 
@@ -83,9 +85,9 @@ function Navigation({
     >
       {tabs.map(({ label, to, className }) => (
         <Tab
-          key={label}
+          key={t(label)}
           className={classes[className]}
-          label={label}
+          label={t(label)}
           component={Link}
           to={to}
         />
@@ -110,7 +112,7 @@ function Navigation({
               matches && handleDrawerToggle();
             }}
           >
-            <ListItemText primary={label} style={{ textAlign: 'center' }} />
+            <ListItemText primary={t(label)} style={{ textAlign: 'center' }} />
           </ListItem>
         ))}
       </List>

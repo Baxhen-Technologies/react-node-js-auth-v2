@@ -14,6 +14,7 @@ import { validate } from './meta/validate';
 import { formFields } from './meta/configObjects';
 import { withMediaQuery } from 'components/HighOrderComponents/withMediaQuery';
 import { selectSignInErrorMessage } from 'containers/AuthContainer/meta/selectors';
+import { withTranslation } from 'react-i18next';
 
 const mapStateToProps = (state) => ({
   signInErrorMessage: selectSignInErrorMessage(state),
@@ -38,9 +39,6 @@ const withMediaQueryProps = withMediaQuery([
   ],
 ]);
 
-export default compose(
-  withConnect,
-  loginForm,
-  useStyles,
-  withMediaQueryProps
-)(LoginPage);
+export default withTranslation()(
+  compose(withConnect, loginForm, useStyles, withMediaQueryProps)(LoginPage)
+);

@@ -31,6 +31,7 @@ class LoginPage extends Component {
       pristine,
       submitting,
       formFields,
+      t,
     } = this.props;
 
     return (
@@ -51,7 +52,7 @@ class LoginPage extends Component {
         >
           <Grid item>
             <Typography variant="h4" color="primary" className={classes.title}>
-              Login
+              {t('components.loginPage.main')}
             </Typography>
           </Grid>
 
@@ -67,7 +68,7 @@ class LoginPage extends Component {
                     <Grid item key={name} style={{ marginBottom: '0.5em' }}>
                       <Field
                         component={inputType}
-                        label={label}
+                        label={t(label)}
                         name={name}
                         type={type}
                         className={classes[className]}
@@ -83,7 +84,7 @@ class LoginPage extends Component {
                       component={RouterLink}
                       to="/recoverPassword"
                     >
-                      Esqueceu a senha?
+                      {t('components.loginPage.forgotPassword')}
                     </Link>
                   </Typography>
                 </Grid>
@@ -94,7 +95,7 @@ class LoginPage extends Component {
                     disabled={pristine || submitting}
                     type="submit"
                   >
-                    Login
+                    {t('components.loginPage.button')}
                   </Button>
                 </Grid>
               </Grid>
@@ -105,7 +106,7 @@ class LoginPage extends Component {
                   marginTop: '9.5px',
                 }}
               >
-                {signInErrorMessage}
+                {t(signInErrorMessage)}
               </FormHelperText>
             </FormControl>
           </Grid>

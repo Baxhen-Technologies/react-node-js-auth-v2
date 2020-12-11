@@ -1,0 +1,42 @@
+{
+  "components": {
+    "navbar": {
+      "home": "Home",
+      "login": "Login",
+      "feature": "Feature",
+      "signUp": "Sign Up",
+      "signOut": "Sign Out"
+    },
+    "homePage": {
+      "main": "Make Your Projects Real",
+      "button": "Login"
+    },
+    "loginPage": {
+      "main": "Login",
+      "formEmail": "Email",
+      "formEmailError": "Enter your email to login",
+      "formPassword": "Password",
+      "formPasswordError": "Enter your password to login",
+      "forgotPassword": "Forgot password?",
+      "button": "Login",
+      "credentialsError": "Invalid Credentials",
+      "accountActivationError": "Account disabled, check your email to activate"
+    },
+    "signUpPage": {
+      "main": "Register",
+      "formEmail": "Email",
+      "formEmailError": "Enter your email to login",
+      "formName": "Name",
+      "formNameError": "Enter your name",
+      "formPassword": "Password",
+      "formPasswordError": "Enter your password to login",
+      "formConfirmPassword": "Confirm the Password",
+      "formConfirmPasswordError": "Enter password confirmation",
+      "formPasswordUnMatchError": "Passwords do not match",
+      "button": "Create Account",
+      "successMessage": "Check your inbox. We sent a link to validate your email.",
+      "emailInUseError": "Email already registered",
+      "dialogTitle": "Email Sent"
+    }
+  }
+}

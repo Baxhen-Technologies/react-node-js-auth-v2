@@ -1,19 +1,19 @@
 import { InputPasswordField } from 'components/ReduxForm/TextInput/InputPasswordField';
 export const formFields = [
   {
-    label: 'Nova senha',
+    label: 'components.formFields.formPassword',
     name: 'password',
     type: 'password',
     className: 'input',
-    noValueError: 'Digite sua nova senha',
+    noValueError: 'components.formFields.formPasswordError',
     inputType: InputPasswordField,
   },
   {
-    label: 'Confirme a sua nova senha',
+    label: 'components.formFields.formConfirmPassword',
     name: 'confirmPassword',
     type: 'password',
     className: 'input',
-    noValueError: 'Digite a confirmação de senha',
+    noValueError: 'components.formFields.formConfirmPasswordError',
     inputType: InputPasswordField,
   },
 ];

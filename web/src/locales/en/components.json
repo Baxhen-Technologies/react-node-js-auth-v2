@@ -24,6 +24,44 @@
     },
     "signUpPage": {
       "main": "Register",
+      "button": "Create Account",
+      "successMessage": "Check your inbox. We sent a link to validate your email.",
+      "emailInUseError": "Email already registered",
+      "dialogTitle": "Email Sent"
+    },
+    "recoverPasswordPage": {
+      "main": "Redefine password",
+      "secondaryText": "Enter registered email",
+      "button": "Recover Password",
+      "emailInUseError": "Email already registered",
+      "dialogTitle": "Email Sent",
+      "dialogTitleError": "Email Not Sent",
+      "dialogSuccessMessage": "Password reset email sent successfully, check your inbox.",
+      "dialogErrorMessageCouldNotSendEmail": "Unable to send email forgot password try again",
+      "dialogErrorMessageNotRegistered": "User not registered in our database.",
+      "dialogErrorMessageInternalError": "Internal server error please try again"
+    },
+    "verifyEmailPage": {
+      "main": "Email verification",
+      "secondary": "We are Verifying your account",
+      "dialogTitle": "Email verification",
+      "dialogTitleError": "Email Verification Failed",
+      "dialogSuccessMessage": "Email verified successfully",
+      "dialogErrorMessageInvalidToken": "Invalid token, contact the help center",
+      "dialogErrorMessageAlreadyVerified": "Your account is already activated can log in, if you are not asking for help in the call center.",
+      "dialogErrorMessageExpiredToken": "Expired token, request a new token."
+    },
+    "resetPasswordPage": {
+      "main": "Create New Password",
+      "secondary": "Register your new password",
+      "button": "Redefine password",
+      "dialogTitle": "Password Reset",
+      "dialogTitleError": "Password Reset Error",
+      "dialogSuccessMessage": "Password updated successfully",
+      "dialogErrorMessageInvalidToken": "Invalid token, for each password update a unique token is required",
+      "dialogErrorMessageExpiredToken": "Expired token, request a new token."
+    },
+    "formFields": {
       "formEmail": "Email",
       "formEmailError": "Enter your email to login",
       "formName": "Name",
@@ -32,11 +70,7 @@
       "formPasswordError": "Enter your password to login",
       "formConfirmPassword": "Confirm the Password",
       "formConfirmPasswordError": "Enter password confirmation",
-      "formPasswordUnMatchError": "Passwords do not match",
-      "button": "Create Account",
-      "successMessage": "Check your inbox. We sent a link to validate your email.",
-      "emailInUseError": "Email already registered",
-      "dialogTitle": "Email Sent"
+      "formPasswordUnMatchError": "Passwords do not match"
     }
   }
 }

@@ -1,11 +1,11 @@
 import { InputTextField } from 'components/ReduxForm/TextInput/InputTextField';
 export const formFields = [
   {
-    label: 'Email',
+    label: 'components.formFields.formEmail',
     name: 'email',
     type: 'email',
     className: 'input',
-    noValueError: 'Digite seu email',
+    noValueError: 'components.formFields.formEmailError',
     inputType: InputTextField,
   },
 ];

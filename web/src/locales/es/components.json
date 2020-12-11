@@ -24,6 +24,44 @@
     },
     "signUpPage": {
       "main": "Registrarse",
+      "button": "Crea una cuenta",
+      "successMessage": "Revisa tu correo. Enviamos un enlace para validar su correo electrónico.",
+      "emailInUseError": "Email ya registrado",
+      "dialogTitle": "Email Enviado"
+    },
+    "recoverPasswordPage": {
+      "main": "Redefinir contraseña",
+      "secondaryText": "Ingrese correo electrónico registrado",
+      "button": "Recuperar contraseña",
+      "emailInUseError": "Correo electrónico ya registrado",
+      "dialogTitle": "Email Enviado",
+      "dialogTitleError": "Email no enviado",
+      "dialogSuccessMessage": "El correo electrónico para restablecer la contraseña se envió correctamente, verifique su bandeja de entrada.",
+      "dialogErrorMessageCouldNotSendEmail": "No se puede enviar el correo electrónico. Olvidé la contraseña. Vuelva a intentarlo.",
+      "dialogErrorMessageNotRegistered": "Usuario no registrado en nuestra base de datos.",
+      "dialogErrorMessageInternalError": "Error interno del servidor, inténtalo de nuevo."
+    },
+    "verifyEmailPage": {
+      "main": "Verificacion de email",
+      "secondary": "Estamos verificando su cuenta",
+      "dialogTitle": "Verificacion de email",
+      "dialogTitleError": "Error de verificación de correo electrónico",
+      "dialogSuccessMessage": "Correo electrónico verificado correctamente",
+      "dialogErrorMessageInvalidToken": "Token no válido, comuníquese con el centro de ayuda",
+      "dialogErrorMessageAlreadyVerified": "Su cuenta ya está activada puede iniciar sesión, si no está pidiendo ayuda en el centro de llamadas.",
+      "dialogErrorMessageExpiredToken": "Token caducado, solicite un token nuevo."
+    },
+    "resetPasswordPage": {
+      "main": "Crear nueva contraseña",
+      "secondary": "Registre su nueva contraseña",
+      "button": "Redefinir contraseña",
+      "dialogTitle": "Restablecimiento de contraseña",
+      "dialogTitleError": "Error de restablecimiento de contraseña",
+      "dialogSuccessMessage": "Contraseña actualizada exitosamente",
+      "dialogErrorMessageInvalidToken": "Token no válido, para cada actualización de contraseña se requiere un token único",
+      "dialogErrorMessageExpiredToken": "Token caducado, solicite un token nuevo."
+    },
+    "formFields": {
       "formEmail": "Email",
       "formEmailError": "Ingrese su email para iniciar sesión",
       "formName": "Nombre",
@@ -32,11 +70,7 @@
       "formPasswordError": "Ingrese su contraseña para iniciar sesión",
       "formConfirmPassword": "Confirme la contraseña",
       "formConfirmPasswordError": "Ingrese la confirmación de la contraseña",
-      "formPasswordUnMatchError": "Las contraseñas no coinciden",
-      "button": "Crea una cuenta",
-      "successMessage": "Revisa tu correo. Enviamos un enlace para validar su correo electrónico.",
-      "emailInUseError": "Email ya registrado",
-      "dialogTitle": "Email Enviado"
+      "formPasswordUnMatchError": "Las contraseñas no coinciden"
     }
   }
 }

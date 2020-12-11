@@ -1,6 +1,7 @@
 import { connect } from 'react-redux';
 import { compose } from 'redux';
 import { reduxForm } from 'redux-form';
+import { withTranslation } from 'react-i18next';
 
 import ResetPassword from './components/ResetPassword';
 import {
@@ -30,4 +31,6 @@ const mapDispatchToProps = (dispatch) => {
 const withConnect = connect(mapStateToProps, mapDispatchToProps);
 const resetPasswordForm = reduxForm({ validate, form: 'resetPassword' });
 
-export default compose(withConnect, resetPasswordForm)(ResetPassword);
+export default withTranslation()(
+  compose(withConnect, resetPasswordForm)(ResetPassword)
+);

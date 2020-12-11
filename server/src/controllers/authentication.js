@@ -29,9 +29,10 @@ exports.forgotPassword = async (req, res) => {
     const user = await User.findOne({ email })
 
     if (!user)
-      return res
-        .status(400)
-        .send({ message: 'Usuário não cadastrado na nossa base de dados.' })
+      return res.status(400).send({
+        message:
+          'components.recoverPasswordPage.dialogErrorMessageNotRegistered',
+      })
 
     const authenticationToken = crypto.randomBytes(20).toString('hex')
 
@@ -62,17 +63,20 @@ exports.forgotPassword = async (req, res) => {
 
     return Email.sendEmail().then((err) => {
       if (err) {
-        return res
-          .status(400)
-          .send({ message: 'could not send forgot password email' })
+        return res.status(400).send({
+          message:
+            'components.recoverPasswordPage.dialogErrorMessageCouldNotSendEmail',
+        })
       }
 
-      return res.send({ message: 'Email enviado com sucesso' })
+      return res.send({
+        message: 'components.recoverPasswordPage.dialogSuccessMessage',
+      })
     })
   } catch (error) {
-    return res
-      .status(400)
-      .send({ message: 'Error on forgot password, try again' })
+    return res.status(400).send({
+      message: 'components.recoverPasswordPage.dialogErrorMessageInternalError',
+    })
   }
 }
 exports.signup = (req, res, next) => {
@@ -160,22 +164,23 @@ exports.resetPassword = async (req, res) => {
 
     if (token !== user.authenticationToken)
       return res.status(400).send({
-        message:
-          'Token inválido, para cada atualização de senha é necessário um token único',
+        message: 'components.resetPasswordPage.dialogErrorMessageInvalidToken',
       })
 
     const now = new Date()
     if (+now > +user.authenticationTokenExpires)
-      return res
-        .status(400)
-        .send({ message: 'Token expirado, solicite um novo token.' })
+      return res.status(400).send({
+        message: 'components.resetPasswordPage.dialogErrorMessageExpiredToken',
+      })
 
     user.password = password
     user.authenticationToken = ''
 
     await user.save()
 
-    return res.send({ message: 'Senha atualizada com sucesso' })
+    return res.send({
+      message: 'components.resetPasswordPage.dialogSuccessMessage',
+    })
   } catch (error) {
     return res.status(400).send({ message: 'Cannot reset password, try again' })
   }
@@ -190,21 +195,19 @@ exports.verifyEmail = async (req, res) => {
 
     if (!user.authenticationToken)
       return res.status(400).send({
-        message:
-          'Sua conta já esta ativada pode fazer login, caso não esteja peça ajuda na central de atendimento.',
+        message: 'components.verifyEmailPage.dialogErrorMessageAlreadyVerified',
       })
 
     if (token !== user.authenticationToken)
       return res.status(400).send({
-        message:
-          'Token inválido, para cada atualização de senha é necessário um token único',
+        message: 'components.verifyEmailPage.dialogErrorMessageInvalidToken',
       })
 
     const now = new Date()
     if (+now > +user.authenticationTokenExpires)
-      return res
-        .status(400)
-        .send({ message: 'Token expirado, solicite um novo token.' })
+      return res.status(400).send({
+        message: 'components.verifyEmailPage.dialogErrorMessageExpiredToken',
+      })
 
     await User.findByIdAndUpdate(user.id, {
       $set: {
@@ -213,7 +216,9 @@ exports.verifyEmail = async (req, res) => {
       },
     })
 
-    return res.send({ message: 'Email verificado com sucesso' })
+    return res.send({
+      message: 'components.verifyEmailPage.dialogSuccessMessage',
+    })
   } catch (error) {
     return res.status(400).send({ message: 'Cannot verify email, try again' })
   }

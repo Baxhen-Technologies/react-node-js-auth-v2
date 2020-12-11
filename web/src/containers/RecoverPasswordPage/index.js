@@ -1,6 +1,7 @@
 import { connect } from 'react-redux';
 import { compose } from 'redux';
 import { reduxForm } from 'redux-form';
+import { withTranslation } from 'react-i18next';
 
 import { recoverPassword } from 'containers/AuthContainer/meta/actions';
 import {
@@ -30,4 +31,6 @@ const mapDispatchToProps = (dispatch) => {
 const withConnect = connect(mapStateToProps, mapDispatchToProps);
 const recoverPasswordForm = reduxForm({ validate, form: 'recoverPassword' });
 
-export default compose(withConnect, recoverPasswordForm)(RecoverPassword);
+export default withTranslation()(
+  compose(withConnect, recoverPasswordForm)(RecoverPassword)
+);

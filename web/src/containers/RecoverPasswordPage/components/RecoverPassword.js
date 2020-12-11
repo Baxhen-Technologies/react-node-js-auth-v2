@@ -24,6 +24,7 @@ function RecoverPassword(props) {
     history,
     loading,
     error,
+    t,
   } = props;
 
   const [open, setOpen] = useState(false);
@@ -56,14 +57,14 @@ function RecoverPassword(props) {
       >
         <Grid item>
           <Typography variant="h4" color="primary" className={classes.title}>
-            Redefinir Senha
+            {t('components.recoverPasswordPage.main')}
           </Typography>
           <Typography
             variant="h4"
             color="primary"
             className={classes.instructionText}
           >
-            Digite o email cadastrado
+            {t('components.recoverPasswordPage.secondaryText')}
           </Typography>
         </Grid>
         <FormControl component="form" onSubmit={handleSubmit(onSubmit)}>
@@ -72,7 +73,7 @@ function RecoverPassword(props) {
               <Grid item key={name} style={{ marginBottom: '0.5em' }}>
                 <Field
                   component={inputType}
-                  label={label}
+                  label={t(label)}
                   name={name}
                   type={type}
                   className={classes[className]}
@@ -87,7 +88,7 @@ function RecoverPassword(props) {
                 disabled={pristine || submitting}
                 type="submit"
               >
-                Recuperar Senha
+                {t('components.recoverPasswordPage.button')}
               </Button>
             </Grid>
           </Grid>
@@ -108,12 +109,12 @@ function RecoverPassword(props) {
             <Grid container direction="column">
               <Grid item>
                 <Typography variant="h4" gutterBottom>
-                  Email Enviado
+                  {t('components.recoverPasswordPage.dialogTitle')}
                 </Typography>
               </Grid>
               <Grid item>
                 <Typography variant="body1">
-                  {recoverPasswordSuccessMessage}
+                  {t(recoverPasswordSuccessMessage)}
                 </Typography>
                 <DialogActions>
                   <Button onClick={onDialogClose} color="primary" autoFocus>
@@ -126,12 +127,12 @@ function RecoverPassword(props) {
             <Grid container direction="column">
               <Grid item>
                 <Typography variant="h4" gutterBottom>
-                  Email Não Enviado
+                  {t('components.recoverPasswordPage.dialogTitleError')}
                 </Typography>
               </Grid>
               <Grid item>
                 <Typography variant="body1">
-                  {recoverPasswordErrorMessage}
+                  {t(recoverPasswordErrorMessage)}
                 </Typography>
               </Grid>
               <DialogActions>

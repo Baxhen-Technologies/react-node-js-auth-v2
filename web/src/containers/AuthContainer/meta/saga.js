@@ -56,7 +56,7 @@ function* handleRecoverPassword() {
 
     yield put(
       actions.recoverPasswordSuccess(
-        `Email de redefinição de senha enviado com sucesso para o email ${email}, verifique a sua caixa de entrada.`
+        'components.recoverPasswordPage.dialogSuccessMessage'
       )
     );
   } catch (error) {

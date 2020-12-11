@@ -17,10 +17,19 @@ import VerifyEmailPage from 'containers/VerifyEmailPage';
 import HomePage from 'containers/HomePage';
 import AboutPage from 'containers/AboutPage';
 
+const location = (lng) => {
+  const locales = ['cn', 'en', 'es', 'pt'];
+  const [locale] = locales.filter((locale) =>
+    lng.toLowerCase().includes(locale)
+  );
+  if (locale) return locale;
+  return 'en';
+};
+
 i18next.use(initReactI18next).init(
   {
     resources,
-    lng: 'cn',
+    lng: location(navigator.language),
     fallbackLng: 'en',
     interpolation: {
       escapeValue: false,

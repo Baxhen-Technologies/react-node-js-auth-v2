@@ -63,7 +63,7 @@ class SignUp extends Component {
         >
           <Grid item>
             <Typography variant="h2" color="primary" className={classes.title}>
-              Cadastro
+              {t('components.signUpPage.main')}
             </Typography>
           </Grid>
 

@@ -13,10 +13,6 @@
     },
     "loginPage": {
       "main": "Login",
-      "formEmail": "Email",
-      "formEmailError": "Digite seu email para fazer login",
-      "formPassword": "Senha",
-      "formPasswordError": "Digite sua senha para fazer login",
       "forgotPassword": "Esqueceu a senha?",
       "button": "Login",
       "credentialsError": "Credencias Inválidas",
@@ -24,6 +20,44 @@
     },
     "signUpPage": {
       "main": "Cadastro",
+      "button": "Criar Conta",
+      "successMessage": "Verifique a sua caixa de entrada. Enviamos um link para validar o seu email.",
+      "emailInUseError": "Email já cadastrado",
+      "dialogTitle": "Email Enviado"
+    },
+    "recoverPasswordPage": {
+      "main": "Redefinir Senha",
+      "secondaryText": "Digite o email cadastrado",
+      "button": "Recuperar Senha",
+      "emailInUseError": "Email já cadastrado",
+      "dialogTitle": "Email Enviado",
+      "dialogTitleError": "Email Não Enviado",
+      "dialogSuccessMessage": "Email de redefinição de senha enviado com sucesso, verifique a sua caixa de entrada.",
+      "dialogErrorMessageCouldNotSendEmail": "Não foi possível enviar o email de esqueceu a senha tente novamente",
+      "dialogErrorMessageNotRegistered": "Usuário não cadastrado na nossa base de dados.",
+      "dialogErrorMessageInternalError": "Erro interno do servidor tente novamente"
+    },
+    "verifyEmailPage": {
+      "main": "Verificação de email",
+      "secondary": "Estamos Verificando a sua conta",
+      "dialogTitle": "Verificação de email",
+      "dialogTitleError": "Verificação De Email Falhou",
+      "dialogSuccessMessage": "Email verificado com sucesso",
+      "dialogErrorMessageInvalidToken": "Token inválido, entre em contato com a central de ajuda",
+      "dialogErrorMessageAlreadyVerified": "Sua conta já esta ativada pode fazer login, caso não esteja peça ajuda na central de atendimento.",
+      "dialogErrorMessageExpiredToken": "Token expirado, solicite um novo token."
+    },
+    "resetPasswordPage": {
+      "main": "Criar Nova Senha",
+      "secondary": "Cadastre a sua nova senha",
+      "button": "Redefinir Senha",
+      "dialogTitle": "Redefinição de Senha",
+      "dialogTitleError": "Erro Redefinição de Senha",
+      "dialogSuccessMessage": "Senha atualizada com sucesso",
+      "dialogErrorMessageInvalidToken": "Token inválido, para cada atualização de senha é necessário um token único",
+      "dialogErrorMessageExpiredToken": "Token expirado, solicite um novo token."
+    },
+    "formFields": {
       "formEmail": "Email",
       "formEmailError": "Digite seu email",
       "formName": "Nome",
@@ -32,11 +66,7 @@
       "formPasswordError": "Digite sua senha",
       "formConfirmPassword": "Confirme a senha",
       "formConfirmPasswordError": "Digite a confirmação de senha",
-      "formPasswordUnMatchError": "As senhas não conferem",
-      "button": "Criar Conta",
-      "successMessage": "Verifique a sua caixa de entrada. Enviamos um link para validar o seu email.",
-      "emailInUseError": "Email já cadastrado",
-      "dialogTitle": "Email Enviado"
+      "formPasswordUnMatchError": "As senhas não conferem"
     }
   }
 }

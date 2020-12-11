@@ -1,5 +1,6 @@
 import { connect } from 'react-redux';
 import { compose } from 'redux';
+import { withTranslation } from 'react-i18next';
 
 import {
   selectVerifyEmailSuccessMessage,
@@ -25,4 +26,4 @@ const mapDispatchToProps = (dispatch) => {
 
 const withConnect = connect(mapStateToProps, mapDispatchToProps);
 
-export default compose(withConnect)(VerifyEmail);
+export default withTranslation()(compose(withConnect)(VerifyEmail));

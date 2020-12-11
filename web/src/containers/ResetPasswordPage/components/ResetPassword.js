@@ -26,6 +26,7 @@ function ResetPassword(props) {
     history,
     error,
     loading,
+    t,
   } = props;
 
   const [open, setOpen] = useState(false);
@@ -76,7 +77,7 @@ function ResetPassword(props) {
               <Grid item key={name} style={{ marginBottom: '0.5em' }}>
                 <Field
                   component={inputType}
-                  label={label}
+                  label={t(label)}
                   name={name}
                   type={type}
                   className={classes[className]}
@@ -111,12 +112,12 @@ function ResetPassword(props) {
             <Grid container direction="column">
               <Grid item>
                 <Typography variant="h4" gutterBottom>
-                  Redefinição de Senha
+                  {t('components.resetPasswordPage.dialogTitle')}
                 </Typography>
               </Grid>
               <Grid item>
                 <Typography variant="body1">
-                  {resetPasswordSuccessMessage}
+                  {t(resetPasswordSuccessMessage)}
                 </Typography>
               </Grid>
               <DialogActions>
@@ -129,12 +130,12 @@ function ResetPassword(props) {
             <Grid container direction="column">
               <Grid item>
                 <Typography variant="h4" gutterBottom>
-                  Houve Algum Problema
+                  {t('components.resetPasswordPage.dialogTitleError')}
                 </Typography>
               </Grid>
               <Grid item>
                 <Typography variant="body1">
-                  {resetPasswordErrorMessage}
+                  {t(resetPasswordErrorMessage)}
                 </Typography>
               </Grid>
             </Grid>

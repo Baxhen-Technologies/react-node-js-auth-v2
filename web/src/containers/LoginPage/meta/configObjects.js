@@ -3,19 +3,19 @@ import { InputTextField } from 'components/ReduxForm/TextInput/InputTextField';
 
 export const formFields = [
   {
-    label: 'components.loginPage.formEmail',
+    label: 'components.formFields.formEmail',
     name: 'email',
     type: 'email',
     className: 'input',
-    noValueError: 'components.loginPage.formEmailError',
+    noValueError: 'components.formFields.formEmailError',
     inputType: InputTextField,
   },
   {
-    label: 'components.loginPage.formPassword',
+    label: 'components.formFields.formPassword',
     name: 'password',
     type: 'password',
     className: 'input',
-    noValueError: 'components.loginPage.formPasswordError',
+    noValueError: 'components.formFields.formPasswordError',
     inputType: InputPasswordField,
   },
 ];

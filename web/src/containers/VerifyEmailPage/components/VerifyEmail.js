@@ -23,6 +23,7 @@ function VerifyEmail(props) {
     error,
     dispatchVerifyEmail,
     history,
+    t,
   } = props;
 
   const [open, setOpen] = useState(false);
@@ -49,7 +50,7 @@ function VerifyEmail(props) {
         <Grid container direction="column">
           <Grid item>
             <Typography variant="h2" className={classes.title}>
-              Verificação de email
+              {t('components.verifyEmailPage.main')}
             </Typography>
             <Typography
               variant="body1"
@@ -59,7 +60,7 @@ function VerifyEmail(props) {
                 marginBottom: '2em',
               }}
             >
-              Estamos Verificando a sua conta
+              {t('components.verifyEmailPage.secondary')}
             </Typography>
           </Grid>
         </Grid>
@@ -78,12 +79,12 @@ function VerifyEmail(props) {
             <Grid container direction="column">
               <Grid item>
                 <Typography variant="h4" gutterBottom>
-                  Verificação de Email
+                  {t('components.verifyEmailPage.dialogTitle')}
                 </Typography>
               </Grid>
               <Grid item>
                 <Typography variant="body1">
-                  {verifyEmailSuccessMessage}
+                  {t(verifyEmailSuccessMessage)}
                 </Typography>
               </Grid>
               <DialogActions>
@@ -96,12 +97,12 @@ function VerifyEmail(props) {
             <Grid container direction="column">
               <Grid item>
                 <Typography variant="h4" gutterBottom>
-                  Verificação De Email Falhou
+                  {t('components.verifyEmailPage.dialogTitleError')}
                 </Typography>
               </Grid>
               <Grid item>
                 <Typography variant="body1">
-                  {verifyEmailErrorMessage}
+                  {t(verifyEmailErrorMessage)}
                 </Typography>
               </Grid>
               <DialogActions>

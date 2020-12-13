@@ -2,70 +2,70 @@
   "components": {
     "navbar": {
       "home": "主页",
-      "login": "登入",
+      "login": "登录",
       "feature": "特征",
       "signUp": "注册",
-      "signOut": "登出"
+      "signOut": "退出"
     },
     "homePage": {
       "main": "使您的项目成为现实",
       "button": "登入"
     },
     "loginPage": {
-      "main": "登入",
-      "formEmail": "电子邮件",
-      "formEmailError": "输入您的电子邮件登录",
+      "main": "登录",
+      "formEmail": "电子邮箱",
+      "formEmailError": "输入您的电子邮箱登录",
       "formPassword": "密码",
       "formPasswordError": "输入密码登录",
       "forgotPassword": "忘记密码？",
-      "button": "登入",
-      "credentialsError": "无效证件",
+      "button": "登录",
+      "credentialsError": "凭证错误",
       "accountActivationError": "帐户已禁用，请检查您的电子邮件以将其激活"
     },
     "signUpPage": {
       "main": "注册",
       "button": "创建帐户",
       "successMessage": "检查你的收件箱。 我们发送了一个链接来验证您的电子邮件。",
-      "emailInUseError": "电子邮件已经注册",
+      "emailInUseError": "电子邮箱已被注册",
       "dialogTitle": "邮件已发送"
     },
     "recoverPasswordPage": {
-      "main": "重新定义密码",
-      "secondary": "输入注册电子邮件",
+      "main": "重新设置密码",
+      "secondary": "输入注册电子邮箱",
       "button": "恢复密码",
-      "emailInUseError": "电子邮件已经注册",
+      "emailInUseError": "电子邮箱已被注册",
       "dialogTitle": "邮件已发送",
       "dialogTitleError": "电子邮件未发送",
       "dialogSuccessMessage": "密码重置电子邮件已成功发送，请检查您的收件箱。",
-      "dialogErrorMessageCouldNotSendEmail": "无法发送电子邮件，忘记密码重试",
+      "dialogErrorMessageCouldNotSendEmail": "无法发送电子邮件，请重试",
       "dialogErrorMessageNotRegistered": "用户未在我们的数据库中注册。",
       "dialogErrorMessageInternalError": "服务器内部错误，请重试"
     },
     "verifyEmailPage": {
-      "main": "电子邮件验证",
+      "main": "电子邮箱验证",
       "secondary": "我们正在验证您的帐户",
-      "dialogTitle": "电子邮件验证",
-      "dialogTitleError": "电子邮件验证失败",
-      "dialogSuccessMessage": "电子邮件验证成功",
-      "dialogErrorMessageInvalidToken": "令牌无效，请与帮助中心联系",
-      "dialogErrorMessageAlreadyVerified": "如果您没有在呼叫中心寻求帮助，那么您已经激活的帐户可以登录。",
-      "dialogErrorMessageExpiredToken": "令牌已过期，请请求一个新令牌。"
+      "dialogTitle": "电子邮箱验证",
+      "dialogTitleError": "电子邮箱验证失败",
+      "dialogSuccessMessage": "电子邮箱验证成功",
+      "dialogErrorMessageInvalidToken": "令牌无效，请申请新令牌",
+      "dialogErrorMessageAlreadyVerified": "您的帐户已成功激活，现在可以登录。如果尚未成功激活，请在帮助中心寻求帮助",
+      "dialogErrorMessageExpiredToken": "令牌已过期，请申请新令牌。"
     },
     "resetPasswordPage": {
-      "main": "创建新密码",
-      "secondary": "注册新密码",
-      "button": "重新定义密码",
+      "main": "设置新密码",
+      "secondary": "输入新密码",
+      "button": "重新设置密码",
       "dialogTitle": "重设密码",
       "dialogTitleError": "密码重置错误",
       "dialogSuccessMessage": "密码更新成功",
-      "dialogErrorMessageInvalidToken": "无效的令牌，对于每个密码更新，都需要一个唯一的令牌",
-      "dialogErrorMessageExpiredToken": "令牌已过期，请请求一个新令牌。"
+      "dialogErrorMessageInvalidToken": "无效的令牌，更新每个密码都需要一个唯一令牌",
+      "dialogErrorMessageExpiredToken": "令牌已过期，请申请一个新令牌。"
     },
     "formFields": {
-      "formEmail": "电子邮件",
-      "formEmailError": "输入您的电子邮件登录",
-      "formName": "名字",
-      "formNameError": "输入你的名字",
+      "formEmail": "电子邮箱",
+      "formEmailError": "输入您的电子邮箱登录",
+      "formName": "姓名",
+      "formNameError": "输入你的姓名",
       "formPassword": "密码",
       "formPasswordError": "输入密码登录",
       "formConfirmPassword": "确认密码",

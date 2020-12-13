@@ -1,10 +1,13 @@
 import axios from 'axios';
 import { BASE_URL } from './environment';
+import { locale } from 'utils/locale';
 
 axios.interceptors.response.use((response) => response.data);
 function network() {
   const baseUrl = `${BASE_URL}/`;
-  const headers = {};
+  const headers = {
+    locale: locale(navigator.language),
+  };
 
   function setCredentials(token) {
     headers.Authorization = `Bearer ${token}`;

@@ -9,6 +9,7 @@ const {
   centralAjudaUrl,
 } = require('../config/config')
 const Mailer = require('../services/Mailer')
+const { resources } = require('../locales')
 
 function tokenForUser(user) {
   const timestamp = new Date().getTime()
@@ -25,6 +26,7 @@ exports.signIn = (req, res) => {
 }
 exports.forgotPassword = async (req, res) => {
   const { email } = req.body
+  const { locale } = req.headers
   try {
     const user = await User.findOne({ email })
 
@@ -57,6 +59,7 @@ exports.forgotPassword = async (req, res) => {
         companyName,
         facebookUrl,
         centralAjudaUrl,
+        locale: resources[locale].resetPassword,
       },
       templateName: 'resetPassword',
     })
@@ -81,6 +84,7 @@ exports.forgotPassword = async (req, res) => {
 }
 exports.signup = (req, res, next) => {
   const { email, password, username } = req.body
+  const { locale } = req.headers
 
   if (!email || !password || !username) {
     res
@@ -138,6 +142,7 @@ exports.signup = (req, res, next) => {
         companyName,
         facebookUrl,
         centralAjudaUrl,
+        locale: resources[locale].verifyEmail,
       },
       templateName: 'verifyEmail',
     })

@@ -64,7 +64,7 @@ function RecoverPassword(props) {
             color="primary"
             className={classes.instructionText}
           >
-            {t('components.recoverPasswordPage.secondaryText')}
+            {t('components.recoverPasswordPage.secondary')}
           </Typography>
         </Grid>
         <FormControl component="form" onSubmit={handleSubmit(onSubmit)}>

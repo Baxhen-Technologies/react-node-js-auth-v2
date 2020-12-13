@@ -25,13 +25,12 @@
                           </div>
                           <div style="clear:both"></div>
                           <div style="text-align:left">
-                            <p>Olá<b>&nbsp;{{username}}</b>,</p>
-                            <p>Você acaba de solicitar a <span class="il">recuperação</span> de <span
-                                class="il">senha</span>, segue link para mudar a sua senha na aplicação</p>
+                            <p>{{locale.html.presentation}}<b>&nbsp;{{username}}</b>,</p>
+                            <p>{{locale.html.body}}</p>
                             <p></p>
-                            <p><a href={{link}}>Recuperar Senha</a></p>
+                            <p><a href={{link}}>{{locale.html.button}}</a></p>
                             <p></p>
-                            <p>Equipe {{companyName}}</p>
+                            <p>{{locale.html.team}}{{companyName}}</p>
                           </div>
                         </td>
                       </tr>
@@ -50,10 +49,9 @@
                     align="center" valign="top"><a href="{{facebookUrl}}"
                       style="box-sizing:border-box;font-size:12px;color:#999;text-decoration:underline;margin:0;padding:0"
                       target="_blank">{{companyName}}
-                    </a> no Facebook |<a href="{{centralAjudaUrl}}"
+                    </a> {{locale.html.inTheFacebook}} |<a href="{{centralAjudaUrl}}"
                       style="box-sizing:border-box;font-size:12px;color:#999;text-decoration:underline;margin:0;padding:0"
-                      target="_blank">Central
-                      de Ajuda</a></td>
+                      target="_blank">{{locale.html.helpCenter}}</a></td>
                 </tr>
               </tbody>
             </table>

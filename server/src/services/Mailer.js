@@ -1,10 +1,10 @@
 const path = require('path')
 const EmailTemplate = require('email-templates')
 const config = require('../config/config')
-const sgMail = require('@sendgrid/mail');
+const sgMail = require('@sendgrid/mail')
 const { pass, email } = config
 
-sgMail.setApiKey(pass);
+sgMail.setApiKey(pass)
 class Mailer {
   constructor(data) {
     this.email = email
@@ -43,16 +43,19 @@ class Mailer {
         this.local,
       )
 
-      sgMail.send({
-        from: this.email,
-        to: this.local.email,
-        html,
-        subject,
-        text,
-      },(err)=>{
-        if(err) return err
-        return null
-      })
+      sgMail.send(
+        {
+          from: this.email,
+          to: this.local.email,
+          html,
+          subject,
+          text,
+        },
+        (err) => {
+          if (err) return err
+          return null
+        },
+      )
     } catch (error) {
       return error.message
     }

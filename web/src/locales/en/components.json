@@ -31,7 +31,7 @@
     },
     "recoverPasswordPage": {
       "main": "Redefine password",
-      "secondaryText": "Enter registered email",
+      "secondary": "Enter registered email",
       "button": "Recover Password",
       "emailInUseError": "Email already registered",
       "dialogTitle": "Email Sent",

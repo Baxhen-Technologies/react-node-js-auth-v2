@@ -27,7 +27,7 @@
     },
     "recoverPasswordPage": {
       "main": "Redefinir Senha",
-      "secondaryText": "Digite o email cadastrado",
+      "secondary": "Digite o email cadastrado",
       "button": "Recuperar Senha",
       "emailInUseError": "Email já cadastrado",
       "dialogTitle": "Email Enviado",
